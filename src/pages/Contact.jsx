@@ -17,21 +17,20 @@ import BackButton from '../components/BackButton';
 export default function Contact() {
   return (
     <div className="space-y-4 px-4 pt-2.5 pb-6 md:px-5">
-      <div>
-        <BackButton label="Back to Home" to="/" />
-      </div>
-
       {/* Header */}
       <div>
-        <span className="text-[10px] font-bold tracking-wider uppercase text-brand-primary">
-          Guiding Light Psychology
-        </span>
-        <h1 className="font-serif text-2xl font-bold text-brand-dark tracking-tight mt-0.5">
-          Get In Touch
-        </h1>
-        <p className="text-xs text-neutral-600 mt-1 leading-relaxed">
-          Ready to begin? Contact Guiding Light Psychology today to schedule your free 15-minute phone consultation.
-        </p>
+        <BackButton label="Back to Home" to="/" />
+        <div className="mt-1">
+          <span className="text-[10px] font-bold tracking-wider uppercase text-brand-primary">
+            Guiding Light Psychology
+          </span>
+          <h1 className="font-serif text-2xl font-bold text-brand-dark tracking-tight mt-0.5">
+            Get In Touch
+          </h1>
+          <p className="text-xs text-neutral-600 mt-1 leading-relaxed">
+            Ready to begin? Contact Guiding Light Psychology today to schedule your free 15-minute phone consultation.
+          </p>
+        </div>
       </div>
 
       {/* Quick Direct Actions Card */}

@@ -36,21 +36,20 @@ export default function Resources() {
 
   return (
     <div className="space-y-4 px-4 pt-2.5 pb-6 md:px-5">
+      {/* Header with Back Button and Title (tight spacing) */}
       <div>
         <BackButton label="Back to Home" to="/" />
-      </div>
-
-      {/* Page Title */}
-      <div>
-        <span className="text-[10px] font-bold tracking-wider uppercase text-brand-primary">
-          Guiding Light Psychology
-        </span>
-        <h1 className="font-serif text-2xl font-bold text-brand-dark tracking-tight mt-0.5">
-          Mental Health Links ({allItems.length})
-        </h1>
-        <p className="text-xs text-neutral-600 mt-1 leading-relaxed">
-          Curated clinical databases, crisis helplines, professional associations, and research literature from the website.
-        </p>
+        <div className="mt-1">
+          <span className="text-[10px] font-bold tracking-wider uppercase text-brand-primary">
+            Guiding Light Psychology
+          </span>
+          <h1 className="font-serif text-2xl font-bold text-brand-dark tracking-tight mt-0.5">
+            Mental Health Links ({allItems.length})
+          </h1>
+          <p className="text-xs text-neutral-600 mt-1 leading-relaxed">
+            Curated clinical databases, crisis helplines, professional associations, and research literature from the website.
+          </p>
+        </div>
       </div>
 
       {/* Crisis Warning Banner */}
