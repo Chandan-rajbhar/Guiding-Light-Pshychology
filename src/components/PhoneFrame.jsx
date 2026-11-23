@@ -20,7 +20,7 @@ export default function PhoneFrame({ children }) {
         {/* Main Independently Scrollable Screen Container with min-h-0 for proper mobile flex shrinking */}
         <div 
           id="phone-scroll-container" 
-          className="relative flex-1 min-h-0 overflow-y-auto overflow-x-hidden phone-screen-scroll bg-[#FAF7F2] pb-24 md:pb-24"
+          className="relative flex-1 min-h-0 overflow-y-auto overflow-x-hidden phone-screen-scroll bg-[#FAF7F2] pb-28 md:pb-28"
         >
           {children}
         </div>
