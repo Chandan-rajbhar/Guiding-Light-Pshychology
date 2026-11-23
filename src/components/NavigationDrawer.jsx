@@ -63,13 +63,18 @@ export default function NavigationDrawer({ isOpen, onClose }) {
         <div className="flex items-center justify-between p-4.5 border-b border-neutral-200/70 bg-white rounded-tl-[28px]">
           <div className="flex items-center space-x-2.5">
             <img 
-              src="/assets/images/guidings-1019x1024.png" 
-              alt="Guiding Light Logo" 
-              className="w-7 h-7 object-contain rounded-full bg-brand-primaryLight/30 p-0.5"
+              src="/assets/images/logo-icon.png" 
+              alt="Guiding Light Psychology" 
+              className="w-8 h-8 object-contain shrink-0"
             />
-            <span className="font-serif font-semibold text-brand-dark text-base">
-              Guiding Light
-            </span>
+            <div className="flex flex-col leading-none">
+              <span className="font-serif font-semibold text-brand-dark text-base">
+                Guiding Light
+              </span>
+              <span className="text-[9px] font-semibold uppercase tracking-wider text-brand-primary mt-0.5">
+                Psychology
+              </span>
+            </div>
           </div>
           <button 
             onClick={onClose}
