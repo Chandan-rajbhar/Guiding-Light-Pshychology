@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Menu, ArrowLeft, Phone, X } from 'lucide-react';
+import { ArrowLeft, Phone, X } from 'lucide-react';
+import { IoMdMenu } from 'react-icons/io';
 
 export default function Header({ onOpenMenu }) {
   const navigate = useNavigate();
@@ -74,12 +75,9 @@ export default function Header({ onOpenMenu }) {
           aria-label={isMenuPage ? "Close Menu" : "Open Navigation Menu"}
         >
           {isMenuPage ? (
-            <X className="w-4 h-4 text-neutral-800" />
+            <X className="w-4.5 h-4.5 text-neutral-800" />
           ) : (
-            <div className="w-3.5 flex flex-col items-end gap-1">
-              <span className="w-3.5 h-[1.8px] bg-neutral-800 rounded-full" />
-              <span className="w-2.5 h-[1.8px] bg-neutral-800 rounded-full" />
-            </div>
+            <IoMdMenu className="w-5 h-5 text-neutral-800" />
           )}
         </button>
       </div>
