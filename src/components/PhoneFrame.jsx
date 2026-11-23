@@ -27,11 +27,6 @@ export default function PhoneFrame({ children }) {
 
         {/* Fixed Bottom Navigation Bar */}
         <BottomNavigation />
-
-        {/* Mobile Home Bar indicator on desktop frame */}
-        <div className="hidden md:flex justify-center pb-2 pt-1 bg-white shrink-0">
-          <div className="w-32 h-1 bg-neutral-300 rounded-full" />
-        </div>
       </div>
     </div>
   );
