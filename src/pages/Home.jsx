@@ -60,7 +60,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="space-y-6 px-4 py-4 md:px-5">
+    <div className="space-y-5 px-4 pt-3 pb-6 md:px-5">
       {/* Hero Section - Clean, Seamless Modern Layout (Outer Card Removed) */}
       <section className="space-y-4">
         {/* Real Website Video Container - Sleek Standalone Video Card */}

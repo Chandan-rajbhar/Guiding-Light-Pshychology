@@ -20,8 +20,10 @@ export default function MeetDrAnna() {
   const navigate = useNavigate();
 
   return (
-    <div className="space-y-6 px-4 py-4 md:px-5">
-      <BackButton label="Back to Home" to="/" />
+    <div className="space-y-4 px-4 pt-2.5 pb-6 md:px-5">
+      <div>
+        <BackButton label="Back to Home" to="/" />
+      </div>
 
       {/* Profile Header Card */}
       <div className="bg-white rounded-3xl p-6 border border-neutral-100 shadow-sm relative overflow-hidden">

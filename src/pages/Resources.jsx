@@ -12,6 +12,7 @@ import {
 import { resourcesData } from '../data/resources';
 import BackButton from '../components/BackButton';
 import CTASection from '../components/CTASection';
+import FilterPills from '../components/FilterPills';
 
 export default function Resources() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -34,8 +35,10 @@ export default function Resources() {
   });
 
   return (
-    <div className="space-y-6 px-4 py-4 md:px-5">
-      <BackButton label="Back to Home" to="/" />
+    <div className="space-y-4 px-4 pt-2.5 pb-6 md:px-5">
+      <div>
+        <BackButton label="Back to Home" to="/" />
+      </div>
 
       {/* Page Title */}
       <div>
@@ -78,22 +81,12 @@ export default function Resources() {
         )}
       </div>
 
-      {/* Category Pills */}
-      <div className="flex items-center space-x-1.5 overflow-x-auto pb-1 no-scrollbar text-xs">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setSelectedCategory(cat)}
-            className={`px-3 py-1.5 rounded-full whitespace-nowrap transition-all text-xs ${
-              selectedCategory === cat
-                ? 'bg-brand-primary text-white font-semibold shadow-xs'
-                : 'bg-white/80 text-neutral-600 hover:bg-white border border-neutral-200/80'
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+      {/* Category Pills with Cursor Drag, Wheel & Arrow Scrolling */}
+      <FilterPills
+        categories={categories}
+        selected={selectedCategory}
+        onSelect={setSelectedCategory}
+      />
 
       {/* Resources Cards Grid */}
       <div className="space-y-3">

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { 
-  CheckCircle2, 
-  ArrowRight, 
-  Calendar, 
-  Phone, 
-  ChevronLeft, 
-  ChevronRight, 
+import {
+  CheckCircle2,
+  ArrowRight,
+  Calendar,
+  Phone,
+  ChevronLeft,
+  ChevronRight,
   Sparkles,
   Heart
 } from 'lucide-react';
@@ -26,7 +26,7 @@ export default function TherapyDetail() {
   const nextService = currentIndex < servicesData.length - 1 ? servicesData[currentIndex + 1] : servicesData[0];
 
   return (
-    <div className="space-y-6 px-4 py-4 md:px-5">
+    <div className="space-y-4 px-4 pt-2.5 pb-6 md:px-5">
       {/* Navigation Top Bar */}
       <div className="flex items-center justify-between">
         <BackButton label="All Services" to="/therapies" />
@@ -40,13 +40,13 @@ export default function TherapyDetail() {
         {/* Banner Image */}
         {service.image ? (
           <div className="relative h-48 w-full bg-neutral-100">
-            <img 
-              src={service.image} 
-              alt={service.title} 
+            <img
+              src={service.image}
+              alt={service.title}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-            
+
             {/* Float Icon */}
             <div className="absolute bottom-4 left-5 flex items-center space-x-3">
               <div className="w-12 h-12 rounded-2xl bg-white p-2 shadow-md flex items-center justify-center">

@@ -16,8 +16,10 @@ import BackButton from '../components/BackButton';
 
 export default function Contact() {
   return (
-    <div className="space-y-6 px-4 py-4 md:px-5">
-      <BackButton label="Back to Home" to="/" />
+    <div className="space-y-4 px-4 pt-2.5 pb-6 md:px-5">
+      <div>
+        <BackButton label="Back to Home" to="/" />
+      </div>
 
       {/* Header */}
       <div>
