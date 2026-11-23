@@ -12,7 +12,7 @@ const navTabs = [
 
 export default function BottomNavigation() {
   return (
-    <nav className="z-30 bg-white/95 backdrop-blur-md border-t border-neutral-100 shadow-[0_-4px_20px_rgba(0,0,0,0.04)] px-3 py-2 shrink-0">
+    <nav className="fixed md:static bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-neutral-100 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-3 py-2 shrink-0 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
       <div className="flex items-center justify-around max-w-md mx-auto">
         {navTabs.map((tab) => {
           const Icon = tab.icon;
