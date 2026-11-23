@@ -148,28 +148,33 @@ export default function Home() {
 
         <div 
           onClick={() => navigate('/meet-dr-anna')}
-          className="cursor-pointer group flex items-center justify-between p-3 rounded-2xl bg-[#FAF8F5] border border-neutral-200/60 hover:border-brand-primary/40 transition-all active:scale-[0.99]"
+          className="cursor-pointer group flex items-center justify-between p-3.5 rounded-2xl bg-[#FAF8F5] border border-neutral-200/70 hover:border-brand-primary/40 transition-all duration-200 active:scale-[0.99]"
         >
-          <div className="flex items-center space-x-3.5">
-            <img 
-              src={doctorData.photo} 
-              alt="Dr. Anna" 
-              className="w-14 h-14 rounded-2xl object-cover ring-2 ring-brand-primary/20 shrink-0 shadow-xs"
-            />
-            <div>
-              <h4 className="font-serif font-semibold text-sm text-brand-dark group-hover:text-brand-primary transition-colors">
+          <div className="flex items-center space-x-3.5 min-w-0 flex-1">
+            <div className="relative shrink-0">
+              <img 
+                src={doctorData.photo} 
+                alt="Dr. Anna" 
+                className="w-14 h-14 rounded-2xl object-cover ring-2 ring-brand-primary/20 shadow-xs"
+              />
+              <span className="absolute -bottom-1 -right-1 bg-brand-primary text-white text-[8px] font-bold px-1.5 py-0.2 rounded-full shadow-2xs">
+                Psy.D.
+              </span>
+            </div>
+            <div className="min-w-0 flex-1">
+              <span className="text-[10px] font-bold tracking-wider uppercase text-brand-primary block">
+                13+ Years Experience
+              </span>
+              <h4 className="font-serif font-bold text-sm text-brand-dark group-hover:text-brand-primary transition-colors leading-snug truncate">
                 About Dr. Anna
               </h4>
-              <p className="text-xs text-neutral-500 leading-tight mt-0.5">
+              <p className="text-xs text-neutral-500 leading-tight">
                 Discover her approach to therapy.
               </p>
-              <span className="inline-block mt-1 text-[10px] text-brand-primary font-medium">
-                13+ Years Experience • Licensed Psychologist
-              </span>
             </div>
           </div>
 
-          <div className="w-8 h-8 rounded-full bg-white shadow-xs flex items-center justify-center text-brand-primary group-hover:translate-x-0.5 transition-transform shrink-0">
+          <div className="w-8 h-8 rounded-full bg-white shadow-2xs group-hover:bg-brand-primary group-hover:text-white flex items-center justify-center text-brand-primary transition-colors shrink-0 ml-2">
             <ChevronRight className="w-4 h-4" />
           </div>
         </div>

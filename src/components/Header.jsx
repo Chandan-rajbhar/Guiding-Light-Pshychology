@@ -1,17 +1,27 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Menu, ArrowLeft, Phone } from 'lucide-react';
+import { Menu, ArrowLeft, Phone, X } from 'lucide-react';
 
 export default function Header({ onOpenMenu }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const isSubpage = location.pathname.startsWith('/therapies/') || 
+  const isMenuPage = location.pathname === '/menu';
+  const isSubpage = !isMenuPage && (
+                    location.pathname.startsWith('/therapies/') || 
                     (location.pathname !== '/' && 
                      location.pathname !== '/therapies' && 
                      location.pathname !== '/adhd-testing' && 
                      location.pathname !== '/resources' && 
-                     location.pathname !== '/contact');
+                     location.pathname !== '/contact'));
+
+  const handleMenuClick = () => {
+    if (isMenuPage) {
+      navigate(-1);
+    } else {
+      navigate('/menu');
+    }
+  };
 
   return (
     <header className="sticky top-0 z-30 flex items-center justify-between px-5 py-3.5 bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-[0_1px_3px_rgba(0,0,0,0.03)] shrink-0">
@@ -51,16 +61,20 @@ export default function Header({ onOpenMenu }) {
           <Phone className="w-4 h-4 text-brand-primary" />
         </a>
 
-        {/* Minimal hamburger menu icon matching reference image */}
+        {/* Minimal hamburger menu icon or close button */}
         <button
-          onClick={onOpenMenu}
+          onClick={handleMenuClick}
           className="p-2 text-neutral-800 hover:text-brand-primary hover:bg-neutral-100 active:scale-95 transition-all rounded-lg"
-          aria-label="Open Navigation Menu"
+          aria-label={isMenuPage ? "Close Menu" : "Open Navigation Menu"}
         >
-          <div className="w-5 flex flex-col items-end gap-1.5">
-            <span className="w-5 h-[2px] bg-neutral-800 rounded-full" />
-            <span className="w-3.5 h-[2px] bg-neutral-800 rounded-full" />
-          </div>
+          {isMenuPage ? (
+            <X className="w-5 h-5 text-neutral-800" />
+          ) : (
+            <div className="w-5 flex flex-col items-end gap-1.5">
+              <span className="w-5 h-[2px] bg-neutral-800 rounded-full" />
+              <span className="w-3.5 h-[2px] bg-neutral-800 rounded-full" />
+            </div>
+          )}
         </button>
       </div>
     </header>

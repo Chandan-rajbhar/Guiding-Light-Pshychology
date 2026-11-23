@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './Header';
 import BottomNavigation from './BottomNavigation';
-import NavigationDrawer from './NavigationDrawer';
 
 export default function PhoneFrame({ children }) {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-[#E5ECF2] p-0 md:p-6 lg:p-8">
       {/* Desktop Realistic Smartphone Mockup Outer Container */}
@@ -18,10 +15,7 @@ export default function PhoneFrame({ children }) {
         <div className="hidden md:block absolute -right-[13px] top-[180px] w-[3px] h-[75px] bg-[#2C313A] rounded-r-sm" />
 
         {/* Global Application Header */}
-        <Header onOpenMenu={() => setDrawerOpen(true)} />
-
-        {/* Slide-out Drawer Navigation */}
-        <NavigationDrawer isOpen={drawerOpen} onClose={() => setDrawerOpen(false)} />
+        <Header />
 
         {/* Main Independently Scrollable Screen Container */}
         <div 

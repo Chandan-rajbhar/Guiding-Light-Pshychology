@@ -12,6 +12,7 @@ import ADHDTesting from './pages/ADHDTesting';
 import Resources from './pages/Resources';
 import FAQs from './pages/FAQs';
 import Contact from './pages/Contact';
+import MenuPage from './pages/MenuPage';
 
 function AppRoutes() {
   useScrollToTop();
@@ -29,6 +30,7 @@ function AppRoutes() {
       <Route path="/meet-dr-anna" element={<MeetDrAnna />} />
       <Route path="/therapies/:slug" element={<TherapyDetail />} />
       <Route path="/faqs" element={<FAQs />} />
+      <Route path="/menu" element={<MenuPage />} />
 
       {/* Direct website URL aliases / redirects */}
       <Route path="/mental-health-links" element={<Navigate to="/resources" replace />} />
