@@ -62,20 +62,19 @@ export default function Contact() {
           {/* Email button */}
           <a
             href={`mailto:${doctorData.email}`}
-            className="flex items-center justify-between p-3.5 rounded-2xl bg-neutral-50 hover:bg-neutral-100/80 border border-neutral-200/70 transition-all group"
+            className="flex items-center p-3.5 rounded-2xl bg-neutral-50 hover:bg-neutral-100/80 border border-neutral-200/70 transition-all group"
           >
-            <div className="flex items-center space-x-3 truncate">
+            <div className="flex items-center space-x-3 min-w-0 flex-1">
               <div className="w-9 h-9 rounded-xl bg-white shadow-2xs flex items-center justify-center text-brand-primary shrink-0">
                 <Mail className="w-4 h-4" />
               </div>
-              <div className="truncate">
+              <div className="min-w-0 flex-1">
                 <span className="text-[10px] uppercase font-semibold text-neutral-500 block">Email Inquiries</span>
-                <span className="text-xs font-semibold text-brand-dark truncate block group-hover:text-brand-primary">
+                <span className="text-xs font-semibold text-brand-dark block group-hover:text-brand-primary leading-tight">
                   {doctorData.email}
                 </span>
               </div>
             </div>
-            <span className="text-xs font-medium text-neutral-500 shrink-0 ml-2">Email</span>
           </a>
 
           {/* Virtual Practice Location */}

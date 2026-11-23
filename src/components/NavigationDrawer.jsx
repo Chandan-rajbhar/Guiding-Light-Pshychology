@@ -159,12 +159,12 @@ export default function NavigationDrawer({ isOpen, onClose }) {
 
           <a 
             href={`mailto:${doctorData.email}`} 
-            className="flex items-center space-x-2.5 text-neutral-700 hover:text-brand-primary transition-colors py-1 px-1 rounded-lg hover:bg-neutral-50 truncate"
+            className="flex items-center space-x-2.5 text-neutral-700 hover:text-brand-primary transition-colors py-1 px-1 rounded-lg hover:bg-neutral-50"
           >
             <div className="w-6 h-6 rounded-full bg-brand-primarySoft flex items-center justify-center text-brand-primary shrink-0">
               <Mail className="w-3 h-3" />
             </div>
-            <span className="truncate font-medium">{doctorData.email}</span>
+            <span className="break-all font-medium text-xs">{doctorData.email}</span>
           </a>
         </div>
       </div>

@@ -213,14 +213,14 @@ export default function MenuPage() {
 
         <a 
           href={`mailto:${doctorData.email}`} 
-          className="flex items-center space-x-2.5 text-neutral-800 hover:text-brand-primary transition-colors py-1 px-1 rounded-lg hover:bg-neutral-50 truncate"
+          className="flex items-center space-x-2.5 text-neutral-800 hover:text-brand-primary transition-colors py-1 px-1 rounded-lg hover:bg-neutral-50"
         >
           <div className="w-7 h-7 rounded-full bg-brand-primarySoft flex items-center justify-center text-brand-primary shrink-0">
             <Mail className="w-3.5 h-3.5" />
           </div>
-          <div className="truncate">
+          <div className="min-w-0 flex-1">
             <span className="text-[10px] text-neutral-400 block uppercase leading-none">Email</span>
-            <span className="font-semibold text-xs truncate block">{doctorData.email}</span>
+            <span className="font-semibold text-xs text-neutral-800 break-all block">{doctorData.email}</span>
           </div>
         </a>
 
