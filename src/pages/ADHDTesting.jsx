@@ -50,21 +50,21 @@ export default function ADHDTesting() {
             {adhdTestingData.intro}
           </p>
 
-          <div className="mt-5 flex flex-col sm:flex-row gap-2.5">
+          <div className="mt-4 flex items-center gap-2">
             <a
               href={adhdTestingData.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="py-3 px-5 rounded-xl bg-brand-primary hover:bg-brand-primaryDark text-white text-xs font-semibold flex items-center justify-center space-x-2 shadow-xs transition-all"
+              className="flex-1 py-2 px-3 rounded-xl bg-brand-primary hover:bg-brand-primaryDark text-white text-xs font-semibold flex items-center justify-center gap-1.5 shadow-2xs hover:shadow-xs active:scale-[0.98] transition-all whitespace-nowrap"
             >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Book Assessment on Alma</span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+              <Sparkles className="w-3.5 h-3.5 text-white/90 shrink-0" />
+              <span>Book on Alma</span>
+              <ExternalLink className="w-3 h-3 text-white/70 shrink-0" />
             </a>
 
             <button
               onClick={() => navigate('/contact')}
-              className="py-3 px-4 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-800 border border-neutral-200 text-xs font-semibold flex items-center justify-center space-x-1.5 transition-colors"
+              className="py-2 px-3 rounded-xl bg-white hover:bg-neutral-50 text-neutral-700 border border-neutral-200/90 text-xs font-medium flex items-center justify-center gap-1 shadow-2xs active:scale-[0.98] transition-all whitespace-nowrap"
             >
               <span>Ask a Question</span>
             </button>
@@ -199,7 +199,7 @@ export default function ADHDTesting() {
           href={adhdTestingData.bookingUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full py-3 px-4 rounded-xl bg-brand-primary hover:bg-brand-primaryDark text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all shadow-xs"
+          className="w-full py-2.5 px-4 rounded-xl bg-brand-primary hover:bg-brand-primaryDark text-white text-xs font-semibold flex items-center justify-center space-x-2 transition-all shadow-xs active:scale-[0.99]"
         >
           <span>Open Alma Booking Portal</span>
           <ExternalLink className="w-3.5 h-3.5" />
