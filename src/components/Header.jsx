@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, Phone, X } from 'lucide-react';
-import { IoMdMenu } from 'react-icons/io';
+import { CgProfile } from 'react-icons/cg';
 
 export default function Header({ onOpenMenu }) {
   const navigate = useNavigate();
@@ -77,7 +77,7 @@ export default function Header({ onOpenMenu }) {
           {isMenuPage ? (
             <X className="w-4.5 h-4.5 text-neutral-800" />
           ) : (
-            <IoMdMenu className="w-5 h-5 text-neutral-800" />
+            <CgProfile className="w-5 h-5 text-neutral-800" />
           )}
         </button>
       </div>
